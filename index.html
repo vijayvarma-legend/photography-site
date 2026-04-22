@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shoot At Sight Weddings — Premium wedding photography capturing timeless love stories across India and beyond." />
+  <title>Shoot At Sight Weddings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/img1.webp" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo" aria-label="Shoot At Sight Weddings">
+      <svg viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="4" y="34" font-family="Cormorant Garamond, serif" font-size="32" font-style="italic" font-weight="300">
+          <tspan fill="#f5f0eb">Shoot</tspan><tspan fill="#c9603a" font-weight="400">@</tspan><tspan fill="#f5f0eb">Sight</tspan>
+        </text>
+        <line x1="4" y1="42" x2="228" y2="42" stroke="#c9a96e" stroke-width="0.5" opacity="0.55"/>
+        <text x="4" y="54" font-family="DM Sans, sans-serif" font-size="7.5" font-weight="300" fill="#c9a96e" letter-spacing="4.5">WEDDINGS</text>
+      </svg>
+    </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <a href="#portfolio">Work</a>
+      <a href="#films">Films</a>
+      <a href="#stories">Stories</a>
+      <a href="#team">Team</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <button class="menu-overlay__close" id="menuClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="#portfolio" class="menu-link">Work</a>
+      <a href="#films" class="menu-link">Films</a>
+      <a href="#stories" class="menu-link">Stories</a>
+      <a href="#team" class="menu-link">Team</a>
+      <a href="#about" class="menu-link">About</a>
+      <a href="#contact" class="menu-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <!-- Mobile: video reel -->
+      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline disablePictureInPicture poster="images/img9.webp" preload="metadata">
+        <source src="videos/vid2.mp4" type="video/mp4" />
+      </video>
+      <!-- Desktop: photo slideshow -->
+      <div class="hero__slideshow" aria-hidden="true">
+        <div class="hero__slide hero__slide--active" style="background-image:url('images/img1.webp'); background-position: center 40%;"></div>
+        <div class="hero__slide" style="background-image:url('images/img8.webp'); background-position: center 20%;"></div>
+        <div class="hero__slide" style="background-image:url('images/img9.webp'); background-position: center 35%;"></div>
+        <div class="hero__slide" style="background-image:url('images/img5.webp'); background-position: center 50%;"></div>
+        <div class="hero__slide" style="background-image:url('images/img3.webp'); background-position: center 30%;"></div>
+      </div>
+    </div>
+    <div class="hero__vignette"></div>
+    <div class="hero__content">
+      <p class="hero__eye">Wedding Photography</p>
+      <h1 class="hero__h1">Capturing<br /><em>timeless</em><br />love stories</h1>
+      <p class="hero__sub">Every frame an emotion. Every edit a memory.</p>
+      <a href="#contact" class="btn-gold">Book Your Date</a>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <i></i>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Timeless Moments</span><b>·</b>
+      <span>Candid Emotions</span><b>·</b>
+      <span>Destination Weddings</span><b>·</b>
+      <span>South Indian Ceremonies</span><b>·</b>
+      <span>Bridal Portraits</span><b>·</b>
+      <span>Timeless Moments</span><b>·</b>
+      <span>Candid Emotions</span><b>·</b>
+      <span>Destination Weddings</span><b>·</b>
+      <span>South Indian Ceremonies</span><b>·</b>
+      <span>Bridal Portraits</span><b>·</b>
+    </div>
+  </div>
+
+  <!-- ── PHOTO MOSAIC ── -->
+  <section class="mosaic" id="portfolio" aria-label="Portfolio">
+    <div class="mosaic__header reveal">
+      <span class="label">Our Work</span>
+      <h2>Every frame,<br /><em>a poem</em></h2>
+    </div>
+    <div class="mosaic__grid">
+      <figure class="mosaic__item mosaic__item--tall reveal-img">
+        <picture><source srcset="images/img8.webp" type="image/webp"><img src="images/img8.jpg" alt="Bride in red lehenga twirling" loading="lazy" /></picture>
+        <figcaption>Bridal Portraits</figcaption>
+      </figure>
+      <figure class="mosaic__item reveal-img">
+        <picture><source srcset="images/img9.webp" type="image/webp"><img src="images/img9.jpg" alt="Couple at Mysore Palace" loading="lazy" /></picture>
+        <figcaption>Destination — Mysore</figcaption>
+      </figure>
+      <figure class="mosaic__item reveal-img">
+        <picture><source srcset="images/img6.webp" type="image/webp"><img src="images/img6.jpg" alt="Bride among tropical foliage" loading="lazy" /></picture>
+        <figcaption>Nature Portraits</figcaption>
+      </figure>
+      <figure class="mosaic__item mosaic__item--tall reveal-img">
+        <picture><source srcset="images/img1.webp" type="image/webp"><img src="images/img1.jpg" alt="Couple at the Louvre, Paris" loading="lazy" /></picture>
+        <figcaption>Destination — Paris</figcaption>
+      </figure>
+      <figure class="mosaic__item reveal-img">
+        <picture><source srcset="images/img7.webp" type="image/webp"><img src="images/img7.jpg" alt="Couple celebrating" loading="lazy" /></picture>
+        <figcaption>Intimate Moments</figcaption>
+      </figure>
+      <figure class="mosaic__item reveal-img">
+        <picture><source srcset="images/img4.webp" type="image/webp"><img src="images/img4.jpg" alt="Groom candid moment" loading="lazy" /></picture>
+        <figcaption>Candid Emotions</figcaption>
+      </figure>
+      <figure class="mosaic__item mosaic__item--wide reveal-img">
+        <picture><source srcset="images/img5.webp" type="image/webp"><img src="images/img5.jpg" alt="Bride procession under floral canopy" loading="lazy" /></picture>
+        <figcaption>Grand Processions</figcaption>
+      </figure>
+      <figure class="mosaic__item reveal-img">
+        <picture><source srcset="images/img3.webp" type="image/webp"><img src="images/img3.jpg" alt="South Indian wedding ceremony" loading="lazy" /></picture>
+        <figcaption>Traditional Ceremonies</figcaption>
+      </figure>
+      <figure class="mosaic__item reveal-img">
+        <picture><source srcset="images/img2.webp" type="image/webp"><img src="images/img2.jpg" alt="Bride by the river" loading="lazy" /></picture>
+        <figcaption>Bridal Portraits</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── FILMS ── -->
+  <section class="films" id="films">
+    <div class="films__header reveal">
+      <span class="label">Films</span>
+      <h2>Moments that<br /><em>move you</em></h2>
+    </div>
+
+    <div class="films__grid">
+      <!-- Featured reel -->
+      <div class="film-card film-card--hero reveal-img">
+        <video class="film-card__video" poster="images/img8.webp" preload="none" playsinline disablePictureInPicture>
+          <source src="videos/vid1.mp4" type="video/mp4" />
+        </video>
+        <div class="film-card__overlay">
+          <div class="film-card__meta">
+            <span class="label">Highlight Reel 2024</span>
+            <h3>The Grand Collection</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Short ambient -->
+      <div class="film-card reveal-img">
+        <video class="film-card__video" poster="images/img9.webp" preload="none" playsinline disablePictureInPicture>
+          <source src="videos/vid3.mp4" type="video/mp4" />
+        </video>
+        <div class="film-card__overlay">
+          <div class="film-card__meta">
+            <span class="label">Reel</span>
+            <h3>Stolen Glances</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Short clip -->
+      <div class="film-card reveal-img">
+        <picture><source srcset="images/img6.webp" type="image/webp"><img src="images/img6.jpg" alt="Nature portrait" loading="lazy" /></picture>
+        <div class="film-card__overlay">
+          <div class="film-card__meta">
+            <span class="label">Portrait Film</span>
+            <h3>Garden of Love</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STORIES ── -->
+  <section class="stories" id="stories">
+    <div class="stories__header reveal">
+      <span class="label">Featured</span>
+      <h2>Love stories<br /><em>we've told</em></h2>
+    </div>
+
+    <div class="stories__list">
+
+      <article class="story reveal-img">
+        <div class="story__img">
+          <picture><source srcset="images/img9.webp" type="image/webp"><img src="images/img9.jpg" alt="Couple at Mysore Palace" loading="lazy" /></picture>
+        </div>
+        <div class="story__body">
+          <span class="story__tag">Destination · Mysore</span>
+          <h3>Ananya & Rohan</h3>
+          <p>Against the ivory grandeur of Mysore Palace, two souls walked into forever — heritage and love entwined in every golden frame.</p>
+        </div>
+      </article>
+
+      <article class="story story--flip reveal-img">
+        <div class="story__img">
+          <picture><source srcset="images/img8.webp" type="image/webp"><img src="images/img8.jpg" alt="Bride in red lehenga" loading="lazy" /></picture>
+        </div>
+        <div class="story__body">
+          <span class="story__tag">Bridal Day · Mumbai</span>
+          <h3>Deepika</h3>
+          <p>A moment frozen in time — the bride twirling on the balcony, lehenga spinning like the beginning of a dream, before the world rushes in.</p>
+        </div>
+      </article>
+
+      <article class="story reveal-img">
+        <div class="story__img">
+          <picture><source srcset="images/img1.webp" type="image/webp"><img src="images/img1.jpg" alt="Couple at the Louvre" loading="lazy" /></picture>
+        </div>
+        <div class="story__body">
+          <span class="story__tag">Destination · Paris</span>
+          <h3>Priya & Arjun</h3>
+          <p>Under Parisian skies, with the Louvre as witness — a love story written in light and lace. Two souls, one city, infinite moments.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── TEAM ── -->
+  <section class="team" id="team">
+    <div class="team__header reveal">
+      <span class="label">The People</span>
+      <h2>Meet the team<br /><em>behind the lens</em></h2>
+    </div>
+
+    <div class="team__photo reveal-img">
+      <img src="images/team.jpg" alt="The Shoot At Sight team" loading="lazy" />
+      <div class="team__photo-caption">Shoot At Sight — Together, we tell your story</div>
+    </div>
+
+    <div class="team__story">
+      <div class="team__story-block reveal">
+        <span class="label">Our Story</span>
+        <h3>Born from a passion<br /><em>for real moments</em></h3>
+        <p>Shoot At Sight didn't start as a business — it started as an obsession. A small group of friends with cameras, chasing light at golden hour, sneaking into ceremonies just to capture the tears nobody else noticed.</p>
+        <p>Over the years, that obsession grew into a team of eleven — photographers, cinematographers, editors, and storytellers — each one handpicked not just for their skill, but for the way they see the world.</p>
+        <p>We've shot in the rain-soaked ghats of Varanasi, under the chandeliers of five-star ballrooms, on the beaches of Goa at 5 AM, and in the quiet corners of a bride's childhood home. Every location teaches us something new. Every couple reminds us why we do this.</p>
+        <p>We're not just a studio. We're the people who will stay until the last dance, cry a little at the vows, and hand you back a film that makes your grandchildren feel like they were there.</p>
+      </div>
+
+      <div class="team__values reveal">
+        <div class="team__value">
+          <strong>Honesty</strong>
+          <span>We capture what's real — the nervous laugh, the happy tear, the stolen glance.</span>
+        </div>
+        <div class="team__value">
+          <strong>Craft</strong>
+          <span>Every frame is composed with intention. Every edit is made with care.</span>
+        </div>
+        <div class="team__value">
+          <strong>Heart</strong>
+          <span>We show up for your day the way a close friend would — fully present, deeply invested.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PARALLAX QUOTE ── -->
+  <div class="parallax-band">
+    <div class="parallax-band__img" id="parallaxImg">
+      <picture><source srcset="images/img2.webp" type="image/webp"><img src="images/img2.jpg" alt="" role="presentation" /></picture>
+    </div>
+    <div class="parallax-band__veil"></div>
+    <blockquote class="parallax-band__quote reveal">
+      "We don't just take photographs.  <em>We collect your emotions.</em>"
+    </blockquote>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="about">
+    <div class="about__img reveal-img">
+      <picture><source srcset="images/img6.webp" type="image/webp"><img src="images/img6.jpg" alt="Bride in tropical garden" loading="lazy" /></picture>
+      <div class="about__img-border"></div>
+    </div>
+    <div class="about__copy">
+      <span class="label reveal">About</span>
+      <h2 class="reveal">We see the story<br /><em>before the shot</em></h2>
+      <p class="reveal">Shoot At Sight Weddings is a boutique studio built on one belief — every wedding is a universe of emotions that deserves to be preserved with honesty and artistry.</p>
+      <p class="reveal">From intimate ceremonies in Goa to grand North Indian weddings, South Indian traditions in Chennai, and destination shoots across Paris and Mysore — we bring a cinematic eye and a still heart to every frame.</p>
+      <div class="stats reveal">
+        <div class="stat"><strong>500+</strong><span>Weddings</span></div>
+        <div class="stat"><strong>12+</strong><span>Years</span></div>
+        <div class="stat"><strong>15+</strong><span>Cities</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact" id="contact">
+    <div class="contact__bg" aria-hidden="true">Contact</div>
+    <div class="contact__inner">
+      <div class="contact__left">
+        <span class="label reveal">Let's Talk</span>
+        <h2 class="reveal">Your story<br /><em>begins here</em></h2>
+        <p class="reveal">Tell us about your wedding day and let's create something extraordinary together.</p>
+        <div class="contact__actions reveal">
+          <a href="https://wa.me/919999999999?text=Hi%20Shoot%20At%20Sight%2C%20I%27d%20like%20to%20enquire%20about%20wedding%20photography." class="btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a href="mailto:hello@shootatsight.in" class="contact__email">hello@shootatsight.in</a>
+        </div>
+      </div>
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="field"><input type="text" placeholder="Your Name" required autocomplete="name" /><span></span></div>
+        <div class="field"><input type="email" placeholder="Email Address" required autocomplete="email" /><span></span></div>
+        <div class="field"><input type="tel" placeholder="WhatsApp Number" autocomplete="tel" /><span></span></div>
+        <div class="field"><input type="date" /><span></span></div>
+        <div class="field field--full"><textarea rows="4" placeholder="Tell us about your wedding day…"></textarea><span></span></div>
+        <button type="submit" class="btn-gold btn-gold--full">Send Enquiry</button>
+        <p class="form-note">We respond within 24 hours ✦</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg viewBox="0 0 240 56" fill="none" width="160">
+          <text x="4" y="34" font-family="Cormorant Garamond,serif" font-size="32" font-style="italic" font-weight="300">
+            <tspan fill="#f5f0eb">Shoot</tspan><tspan fill="#c9603a" font-weight="400">@</tspan><tspan fill="#f5f0eb">Sight</tspan>
+          </text>
+          <line x1="4" y1="42" x2="228" y2="42" stroke="#c9a96e" stroke-width="0.5" opacity="0.5"/>
+          <text x="4" y="54" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="300" fill="#c9a96e" letter-spacing="4.5">WEDDINGS</text>
+        </svg>
+        <p>Capturing timeless love stories across India and beyond.</p>
+      </div>
+      <div class="footer__nav">
+        <h4>Navigate</h4>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#films">Films</a>
+        <a href="#stories">Stories</a>
+        <a href="#team">Team</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__social">
+        <h4>Follow</h4>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Shoot At Sight Weddings. All rights reserved.</p>
+      <p>Made with love for love stories</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <a href="#contact" class="sticky-cta" id="stickyCta">Book Now</a>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
