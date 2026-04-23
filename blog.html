@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shoot At Sight Weddings Blog — Stories behind the stories, insights from the lens, and the art of wedding photography." />
+  <title>Blog — Shoot At Sight Weddings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <header class="nav nav--solid" id="nav">
+    <a href="index.html" class="nav__logo" aria-label="Shoot At Sight Weddings">
+      <svg viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="4" y="34" font-family="Cormorant Garamond, serif" font-size="32" font-style="italic" font-weight="300">
+          <tspan fill="#f5f0eb">Shoot</tspan><tspan fill="#c9603a" font-weight="400">@</tspan><tspan fill="#f5f0eb">Sight</tspan>
+        </text>
+        <line x1="4" y1="42" x2="228" y2="42" stroke="#c9a96e" stroke-width="0.5" opacity="0.55"/>
+        <text x="4" y="54" font-family="DM Sans, sans-serif" font-size="7.5" font-weight="300" fill="#c9a96e" letter-spacing="4.5">WEDDINGS</text>
+      </svg>
+    </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <a href="index.html#portfolio">Work</a>
+      <a href="index.html#films">Films</a>
+      <a href="index.html#stories">Stories</a>
+      <a href="index.html#team">Team</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()" ontouchend="handleBurgerTouch(event)">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-overlay__close" onclick="toggleMenu()" ontouchend="handleBurgerTouch(event)" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="index.html#portfolio" class="menu-link" data-num="01" onclick="closeMenu()">Work</a>
+      <a href="index.html#films" class="menu-link" data-num="02" onclick="closeMenu()">Films</a>
+      <a href="index.html#stories" class="menu-link" data-num="03" onclick="closeMenu()">Stories</a>
+      <a href="index.html#team" class="menu-link" data-num="04" onclick="closeMenu()">Team</a>
+      <a href="blog.html" class="menu-link" data-num="05" onclick="closeMenu()">Blog</a>
+      <a href="index.html#about" class="menu-link" data-num="06" onclick="closeMenu()">About</a>
+      <a href="index.html#contact" class="menu-link" data-num="07" onclick="closeMenu()">Contact</a>
+    </nav>
+  </div>
+
+  <script>
+    var _menuOpen = false;
+    function openMenu() {
+      _menuOpen = true;
+      document.getElementById('menuOverlay').classList.add('open');
+      document.getElementById('burger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      _menuOpen = false;
+      document.getElementById('menuOverlay').classList.remove('open');
+      document.getElementById('burger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function toggleMenu() { _menuOpen ? closeMenu() : openMenu(); }
+    function handleBurgerTouch(e) { e.preventDefault(); toggleMenu(); }
+  </script>
+
+  <!-- ── BLOG HERO ── -->
+  <section class="blog-hero">
+    <div class="blog-hero__content">
+      <span class="label">Journal</span>
+      <h1>Stories behind<br /><em>the stories</em></h1>
+      <p>Insights from the lens, thoughts on light and love, and the quiet moments that make a wedding unforgettable.</p>
+    </div>
+  </section>
+
+  <!-- ── BLOG GRID ── -->
+  <section class="blog">
+    <div class="blog__grid">
+
+      <article class="blog-card blog-card--featured reveal-img">
+        <div class="blog-card__img">
+          <picture><source srcset="images/img1.webp" type="image/webp"><img src="images/img1.jpg" alt="Couple at the Louvre, Paris" loading="lazy" /></picture>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Destination Weddings</span>
+          <h3>Why Paris Will Always Be the Most Romantic Backdrop for a Wedding</h3>
+          <p>From the golden light that falls on the Seine at dusk to the quiet grandeur of the Louvre — we explore why couples keep choosing Paris, and how we capture it differently every time.</p>
+          <div class="blog-card__meta">
+            <span>April 2025</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal-img">
+        <div class="blog-card__img">
+          <picture><source srcset="images/img9.webp" type="image/webp"><img src="images/img9.jpg" alt="Couple at Mysore Palace" loading="lazy" /></picture>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Heritage Venues</span>
+          <h3>Shooting at Mysore Palace — Light, Legacy & Love</h3>
+          <p>There's a particular kind of magic that happens when a couple stands before 400 years of history. Here's how we approach palace weddings.</p>
+          <div class="blog-card__meta">
+            <span>March 2025</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal-img">
+        <div class="blog-card__img">
+          <picture><source srcset="images/img8.webp" type="image/webp"><img src="images/img8.jpg" alt="Bride in red lehenga" loading="lazy" /></picture>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Bridal Portraits</span>
+          <h3>The Art of the Bridal Portrait — More Than Just a Photo</h3>
+          <p>A bridal portrait is the one frame that belongs entirely to her. We talk about how we create that space, that stillness, and that image she'll keep forever.</p>
+          <div class="blog-card__meta">
+            <span>February 2025</span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal-img">
+        <div class="blog-card__img">
+          <picture><source srcset="images/img5.webp" type="image/webp"><img src="images/img5.jpg" alt="Grand procession" loading="lazy" /></picture>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">South Indian Weddings</span>
+          <h3>Colour, Chaos & Ceremony — Photographing South Indian Weddings</h3>
+          <p>The rituals move fast, the colours are vivid, and every moment carries centuries of meaning. Here's our approach to documenting these beautiful ceremonies.</p>
+          <div class="blog-card__meta">
+            <span>January 2025</span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal-img">
+        <div class="blog-card__img">
+          <picture><source srcset="images/img3.webp" type="image/webp"><img src="images/img3.jpg" alt="Traditional ceremony" loading="lazy" /></picture>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Behind the Lens</span>
+          <h3>What We Look for Before We Ever Lift the Camera</h3>
+          <p>Great wedding photography starts long before the shutter clicks. We share the quiet observations, the light readings, and the emotional cues we track all day.</p>
+          <div class="blog-card__meta">
+            <span>December 2024</span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal-img">
+        <div class="blog-card__img">
+          <picture><source srcset="images/img6.webp" type="image/webp"><img src="images/img6.jpg" alt="Bride in nature" loading="lazy" /></picture>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Outdoor Shoots</span>
+          <h3>Working with Natural Light — Our Favourite Time of Day</h3>
+          <p>Golden hour gets all the glory, but we've found magic in every part of the day. Here's how we read light and use it to tell better stories.</p>
+          <div class="blog-card__meta">
+            <span>November 2024</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg viewBox="0 0 240 56" fill="none" width="160">
+          <text x="4" y="34" font-family="Cormorant Garamond,serif" font-size="32" font-style="italic" font-weight="300">
+            <tspan fill="#f5f0eb">Shoot</tspan><tspan fill="#c9603a" font-weight="400">@</tspan><tspan fill="#f5f0eb">Sight</tspan>
+          </text>
+          <line x1="4" y1="42" x2="228" y2="42" stroke="#c9a96e" stroke-width="0.5" opacity="0.5"/>
+          <text x="4" y="54" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="300" fill="#c9a96e" letter-spacing="4.5">WEDDINGS</text>
+        </svg>
+        <p>Capturing timeless love stories across India and beyond.</p>
+      </div>
+      <div class="footer__nav">
+        <h4>Navigate</h4>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#films">Films</a>
+        <a href="index.html#stories">Stories</a>
+        <a href="index.html#team">Team</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer__social">
+        <h4>Follow</h4>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Shoot At Sight Weddings. All rights reserved.</p>
+      <p>Made with love for love stories</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
