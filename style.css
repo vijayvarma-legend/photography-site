@@ -168,37 +168,45 @@ h3 { font-family: var(--serif); font-weight: 300; color: var(--cream); }
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
+
+@media (min-width: 768px) {
+  .nav__logo { gap: 1.4rem; }
+}
+.nav__logo-svg { width: 140px; height: auto; }
 .nav__logo svg { width: 140px; height: auto; }
 
 .nav__logo-img {
-  height: 58px;
-  width: 58px;
-  object-fit: cover;
+  height: 55px;
+  width: auto;
+  object-fit: contain;
   display: block;
-  border-radius: 10px;
   flex-shrink: 0;
+  filter: invert(1) sepia(1) saturate(0.3) brightness(0.95);
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 .footer__logo-wrap {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   margin-bottom: 0.9rem;
 }
 .footer__logo-img {
-  height: 64px;
-  width: 64px;
-  object-fit: cover;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
   display: block;
-  border-radius: 10px;
   flex-shrink: 0;
+  filter: invert(1) sepia(1) saturate(0.3) brightness(0.95);
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 @media (max-width: 480px) {
-  .nav__logo-img { height: 36px; width: 36px; }
-  .nav__logo svg { width: 120px; }
+  .nav__logo-img { height: 44px; transform: scale(1.3); }
 }
 
 .nav__links {
