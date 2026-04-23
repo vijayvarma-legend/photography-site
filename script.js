@@ -44,54 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Sticky CTA ── */
   const stickyCta = document.getElementById('stickyCta');
 
-  /* ── Mobile menu ── */
-  const burger = document.getElementById('burger');
-  const overlay = document.getElementById('menuOverlay');
-  const menuClose = document.getElementById('menuClose');
-  const menuLinks = document.querySelectorAll('.menu-link');
-
-  const openMenu = () => {
-    overlay.classList.add('open');
-    burger.classList.add('open');
-    burger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-    if (lenis) lenis.stop();
-  };
-
-  const closeMenu = () => {
-    overlay.classList.remove('open');
-    burger.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-    if (lenis) lenis.start();
-  };
-
-  // use touchend + click for both mouse and touch
-  ['click', 'touchend'].forEach(evt => {
-    burger.addEventListener(evt, (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      overlay.classList.contains('open') ? closeMenu() : openMenu();
-    }, { passive: false });
-
-    menuClose.addEventListener(evt, (e) => {
-      e.preventDefault();
-      closeMenu();
-    }, { passive: false });
-  });
-
-  menuLinks.forEach(l => {
-    l.addEventListener('click', closeMenu);
-    l.addEventListener('touchend', closeMenu);
-  });
-
-  // close on backdrop tap
-  overlay.addEventListener('touchend', (e) => {
-    if (e.target === overlay) closeMenu();
-  });
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeMenu();
-  });
+  /* ── Mobile menu (controlled via inline handlers in HTML) ── */
+  // Hook lenis pause into the global menu functions
+  const _origOpen = window.openMenu;
+  const _origClose = window.closeMenu;
+  window.openMenu = () => { _origOpen(); if (lenis) lenis.stop(); };
+  window.closeMenu = () => { _origClose(); if (lenis) lenis.start(); };
 
   /* ── Smooth anchor scroll ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {

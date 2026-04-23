@@ -32,23 +32,41 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()" ontouchend="handleBurgerTouch(event)">
       <span></span><span></span>
     </button>
   </header>
 
-  <!-- Mobile menu overlay -->
-  <div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Mobile menu">
-    <button class="menu-overlay__close" id="menuClose" aria-label="Close menu">✕</button>
+  <!-- Mobile menu -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-overlay__close" onclick="toggleMenu()" ontouchend="handleBurgerTouch(event)" aria-label="Close menu">✕</button>
     <nav>
-      <a href="#portfolio" class="menu-link">Work</a>
-      <a href="#films" class="menu-link">Films</a>
-      <a href="#stories" class="menu-link">Stories</a>
-      <a href="#team" class="menu-link">Team</a>
-      <a href="#about" class="menu-link">About</a>
-      <a href="#contact" class="menu-link">Contact</a>
+      <a href="#portfolio" class="menu-link" data-num="01" onclick="closeMenu()">Work</a>
+      <a href="#films" class="menu-link" data-num="02" onclick="closeMenu()">Films</a>
+      <a href="#stories" class="menu-link" data-num="03" onclick="closeMenu()">Stories</a>
+      <a href="#team" class="menu-link" data-num="04" onclick="closeMenu()">Team</a>
+      <a href="#about" class="menu-link" data-num="05" onclick="closeMenu()">About</a>
+      <a href="#contact" class="menu-link" data-num="06" onclick="closeMenu()">Contact</a>
     </nav>
   </div>
+
+  <script>
+    var _menuOpen = false;
+    function openMenu() {
+      _menuOpen = true;
+      document.getElementById('menuOverlay').classList.add('open');
+      document.getElementById('burger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      _menuOpen = false;
+      document.getElementById('menuOverlay').classList.remove('open');
+      document.getElementById('burger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function toggleMenu() { _menuOpen ? closeMenu() : openMenu(); }
+    function handleBurgerTouch(e) { e.preventDefault(); toggleMenu(); }
+  </script>
 
   <!-- ── HERO ── -->
   <section class="hero" id="hero">
